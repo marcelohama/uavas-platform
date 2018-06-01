@@ -1,0 +1,7 @@
+/* Jason Project */ MAS jasonAndroid {
+	infrastructure: Centralised
+	environment: simulators.uavastsim.TSimEnvironment
+	agents:
+		uavas_tsim agentArchClass mind.arch.UAVASMKQuadrotor;
+		aslSourcePath: "src/mind/arch";
+} 

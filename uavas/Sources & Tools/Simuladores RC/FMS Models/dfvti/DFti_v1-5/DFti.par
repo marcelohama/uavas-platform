@@ -1,0 +1,364 @@
+VERSION 1.0
+
+INFO
+
+"Dragonflyer V Ti" 
+Version 1.2fp (Faster Performance)
+
+Model & par created by Scarz
+Date: 6-7-05
+
+MyWeb; http://home.comcast.net/~scarzvanetten/fms.htm
+Request Source; http://rctoys.com
+
+4 Channel Control: ch1 = Lift, ch2 = rotate, ch3-4 = tilt
+
+sorry, no piezoelectric oscillation gyros... ya gotta lean it back, "No school, like old school."
+
+Enjoy
+
+ENDINFO
+
+// <ParEditor Ver0.5 2004-12-07 Masuoka Hideaki>
+// ParEditor.Scale=100
+// ParEditor.Data1=						2	9.223372E0025	1.4019533E0026
+// ParEditor.Data2=0.5	0.5	0.5	0.5	0.5	0.5	0.0000	0.8	3.8000
+// ParEditor.Data3=0	0	0
+// ParEditor.Data4=0	0	2	2	-1	-5				
+// ParEditor.Data5=2	-2	1	-1	0	0				
+// ParEditor.Data6=1	1	0	0	-2	1				
+// ParEditor.Data7=15	0
+
+AIRPLANE
+
+MAIN
+
+2.5                           //Mass [Kg]
+0.1                           //Roll Inertia Moment Ixx [kg*m^2]
+0.1                           //Pitch Inertia Moment Iyy [kg*m^2]
+0.1                           //Yaw Inertia Moment Izz [kg*m^2]
+-0.05                         //Ixz [kg*m^2]
+0.0 0 0                       //èdêSà íuX,Y,Z [m]
+0.1                           //Height of Center of gravity [m]
+
+MOTOR
+
+//MOTOR1 <FRONT>
+0.9 0 -0.35                   //ÉvÉçÉyÉâà íu [m]
+0 0 -1                        //êÑóÕÉxÉNÉgÉã X,Y,Z
+0.5                           //propeller diameter [m]
+0.02                          //pitch, upward gradient of propeller [m]
+2                             //number of propeller blades
+0.02                          //mean chord length of propeller blades [m]
+LEFT                          //Rotation(RIGHT/LEFT)
+0.00001                       //moment of inertia [kg*m^2]
+2                             //channel
+ELECTRO                       //COMBUSTION/ELECTRO
+5                             //motor voltage [V]
+16000                         //idling speed [rpm]
+1.7                           //idling current [A]
+85                            //blocking current [A]
+1                             //Gear ratio
+1                             //Gear efficiency
+7                             //number of batt cells
+7800                          //capacity of batts [mAh]
+5                             //internal battery resistance [mohm]
+
+//MOTOR2 <REAR>
+-0.9 0 -0.35                  //ÉvÉçÉyÉâà íu [m]
+0 0 -1                        //êÑóÕÉxÉNÉgÉã X,Y,Z
+0.5                           //propeller diameter [m]
+0.02                          //pitch, upward gradient of propeller [m]
+2                             //number of propeller blades
+0.02                          //mean chord length of propeller blades [m]
+RIGHT                         //Rotation(RIGHT/LEFT)
+0.00001                       //moment of inertia [kg*m^2]
+6                             //channel
+ELECTRO                       //COMBUSTION/ELECTRO
+5                             //motor voltage [V]
+16000                         //idling speed [rpm]
+1.7                           //idling current [A]
+85                            //blocking current [A]
+1                             //Gear ratio
+1                             //Gear efficiency
+7                             //number of batt cells
+7800                          //capacity of batts [mAh]
+5                             //internal battery resistance [mohm]
+
+//MOTOR3 <RIGHT>
+0 0.9 -0.35                   //ÉvÉçÉyÉâà íu [m]
+0 0 -1                        //êÑóÕÉxÉNÉgÉã X,Y,Z
+0.5                           //propeller diameter [m]
+0.02                          //pitch, upward gradient of propeller [m]
+2                             //number of propeller blades
+0.02                          //mean chord length of propeller blades [m]
+RIGHT                         //Rotation(RIGHT/LEFT)
+0.00001                       //moment of inertia [kg*m^2]
+1                             //channel
+ELECTRO                       //COMBUSTION/ELECTRO
+5                             //motor voltage [V]
+16000                         //idling speed [rpm]
+1.7                           //idling current [A]
+85                            //blocking current [A]
+1                             //Gear ratio
+1                             //Gear efficiency
+7                             //number of batt cells
+7800                          //capacity of batts [mAh]
+5                             //internal battery resistance [mohm]
+
+//MOTOR4 <LEFT>
+0 -0.9 -0.35                  //ÉvÉçÉyÉâà íu [m]
+0 0 -1                        //êÑóÕÉxÉNÉgÉã X,Y,Z
+0.5                           //propeller diameter [m]
+0.02                          //pitch, upward gradient of propeller [m]
+2                             //number of propeller blades
+0.02                          //mean chord length of propeller blades [m]
+LEFT                          //Rotation(RIGHT/LEFT)
+0.00001                       //moment of inertia [kg*m^2]
+0                             //channel
+ELECTRO                       //COMBUSTION/ELECTRO
+5                             //motor voltage [V]
+16000                         //idling speed [rpm]
+1.7                           //idling current [A]
+85                            //blocking current [A]
+1                             //Gear ratio
+1                             //Gear efficiency
+7                             //number of batt cells
+7800                          //capacity of batts [mAh]
+5                             //internal battery resistance [mohm]
+
+//MOTOR5 <IDLE>
+0 0 -0.35                     //ÉvÉçÉyÉâà íu [m]
+0 0 -1                        //êÑóÕÉxÉNÉgÉã X,Y,Z
+1.0                           //propeller diameter [m]
+0.03                          //pitch, upward gradient of propeller [m]
+2                             //number of propeller blades
+0.02                          //mean chord length of propeller blades [m]
+RIGHT                         //Rotation(RIGHT/LEFT)
+0.00001                       //moment of inertia [kg*m^2]
+0                             //channel
+ELECTRO                       //COMBUSTION/ELECTRO
+5                             //motor voltage [V]
+16000                         //idling speed [rpm]
+1.7                           //idling current [A]
+85                            //blocking current [A]
+1                             //Gear ratio
+1                             //Gear efficiency
+7                             //number of batt cells
+7800                          //capacity of batts [mAh]
+5                             //internal battery resistance [mohm]
+
+//MOTOR6 <ROTATE>
+0 0 -0.35                     //ÉvÉçÉyÉâà íu [m]
+0 0 -1                        //êÑóÕÉxÉNÉgÉã X,Y,Z
+1.0                           //propeller diameter [m]
+0.03                          //pitch, upward gradient of propeller [m]
+2                             //number of propeller blades
+0.02                          //mean chord length of propeller blades [m]
+LEFT                          //Rotation(RIGHT/LEFT)
+0.00001                       //moment of inertia [kg*m^2]
+3                             //channel
+ELECTRO                       //COMBUSTION/ELECTRO
+5                             //motor voltage [V]
+16000                         //idling speed [rpm]
+1.7                           //idling current [A]
+85                            //blocking current [A]
+1                             //Gear ratio
+1                             //Gear efficiency
+7                             //number of batt cells
+7800                          //capacity of batts [mAh]
+5                             //internal battery resistance [mohm]
+
+WING
+
+//WING1 <FUS>
+0.27 0 0.005                  //óÉà íuX,Y,Z [m]
+1 0 0                         //Ex X,Y,Z
+0 0 -1                        //Ey X,Y,Z
+3                             //polar number
+0.001                         //span [m]
+3                             //number of elements
+AUTOELEMENT
+0                             //Angle [deg]
+0.001                         //chord length at the first end [m]
+0.001                         //chord length at the second end [m]
+0                             //chord length of the flap [m]
+0                             //start position of the flap [m]
+0                             //end position of the flap [m]
+0                             //Maximum Angle [deg]
+0                             //channel
+
+POLAR
+
+//POLAR1
+18                            //ÉfÅ[É^êî
+-180 0 0.03 0                 //å}äp(deg),CL,CD,CM
+-170 0.63 0.1 0               //å}äp(deg),CL,CD,CM
+-90 0 1.2 0.3                 //å}äp(deg),CL,CD,CM
+-50 -0.6 0.96 0.21            //å}äp(deg),CL,CD,CM
+-21 -0.73 0.48 0.12           //å}äp(deg),CL,CD,CM
+-13 -0.7 0.3 0.1              //å}äp(deg),CL,CD,CM
+-12 -0.9 0.07 0               //å}äp(deg),CL,CD,CM
+-9 -0.82 0.045 0              //å}äp(deg),CL,CD,CM
+-3.5 -0.34 0.025 0            //å}äp(deg),CL,CD,CM
+3.5 0.34 0.025 0              //å}äp(deg),CL,CD,CM
+9 0.82 0.045 0                //å}äp(deg),CL,CD,CM
+12 0.9 0.07 0                 //å}äp(deg),CL,CD,CM
+13 0.7 0.3 -0.1               //å}äp(deg),CL,CD,CM
+21 0.73 0.48 -0.12            //å}äp(deg),CL,CD,CM
+50 0.6 0.96 -0.21             //å}äp(deg),CL,CD,CM
+90 0 1.2 -0.3                 //å}äp(deg),CL,CD,CM
+170 -0.63 0.1 0               //å}äp(deg),CL,CD,CM
+180 0 0.03 0                  //å}äp(deg),CL,CD,CM
+-12                           //angle of attack lower flow separation [deg]
+12                            //angle of attack upper flow separation [deg]
+1.5                           //flow separation hysteresis [deg]
+
+//POLAR2
+18                            //ÉfÅ[É^êî
+-180 0 0.03 0                 //å}äp(deg),CL,CD,CM
+-170 0.63 0.1 0               //å}äp(deg),CL,CD,CM
+-90 0 1.2 0.3                 //å}äp(deg),CL,CD,CM
+-50 -0.5 1 0.21               //å}äp(deg),CL,CD,CM
+-20 -0.61 0.58 0.12           //å}äp(deg),CL,CD,CM
+-10.5 -0.59 0.28 0.1          //å}äp(deg),CL,CD,CM
+-10 -0.76 0.07 0              //å}äp(deg),CL,CD,CM
+-8.2 -0.72 0.045 0            //å}äp(deg),CL,CD,CM
+-2.5 -0.28 0.025 0            //å}äp(deg),CL,CD,CM
+2.5 0.28 0.025 0              //å}äp(deg),CL,CD,CM
+8.2 0.72 0.045 0              //å}äp(deg),CL,CD,CM
+10 0.76 0.07 0                //å}äp(deg),CL,CD,CM
+10.5 0.59 0.28 -0.1           //å}äp(deg),CL,CD,CM
+20 0.61 0.58 -0.12            //å}äp(deg),CL,CD,CM
+50 0.5 1 -0.21                //å}äp(deg),CL,CD,CM
+90 0 1.2 -0.3                 //å}äp(deg),CL,CD,CM
+170 -0.63 0.1 0               //å}äp(deg),CL,CD,CM
+180 0 0.03 0                  //å}äp(deg),CL,CD,CM
+-10                           //angle of attack lower flow separation [deg]
+10                            //angle of attack upper flow separation [deg]
+1                             //flow separation hysteresis [deg]
+
+//POLAR3
+17                            //ÉfÅ[É^êî
+-180 0 0.03 0                 //å}äp(deg),CL,CD,CM
+-170 0.2 0.1 0                //å}äp(deg),CL,CD,CM
+-90 0 1.2 0.3                 //å}äp(deg),CL,CD,CM
+-50 -0.4 0.96 0.21            //å}äp(deg),CL,CD,CM
+-30 -0.3 0.63 0.14            //å}äp(deg),CL,CD,CM
+-13 0 0.19 0.12               //å}äp(deg),CL,CD,CM
+-9.01 0.15 0.07 0.1           //å}äp(deg),CL,CD,CM
+-9 -0.4 0.04 0.05             //å}äp(deg),CL,CD,CM
+0 0 0.032 0                   //å}äp(deg),CL,CD,CM
+9 0.4 0.04 -0.05              //å}äp(deg),CL,CD,CM
+9.01 -0.15 0.07 -0.1          //å}äp(deg),CL,CD,CM
+13 0 0.19 -0.12               //å}äp(deg),CL,CD,CM
+30 0.3 0.63 -0.14             //å}äp(deg),CL,CD,CM
+50 0.4 0.96 -0.21             //å}äp(deg),CL,CD,CM
+90 0 1.2 -0.3                 //å}äp(deg),CL,CD,CM
+170 -0.2 0.1 0                //å}äp(deg),CL,CD,CM
+180 0 0.03 0                  //å}äp(deg),CL,CD,CM
+-9                            //angle of attack lower flow separation [deg]
+9                             //angle of attack upper flow separation [deg]
+2                             //flow separation hysteresis [deg]
+
+POINT                         //3Dã´äEà íu
+
+//POINT1 <DOME>
+0 0 -0.55                     //É|ÉCÉìÉgà íu [m]
+50                            //spring constant [N/m]
+3                             //Viscosity [N*s/m]
+9                             //breaking load [N]
+1                             //coefficent of friction
+
+//POINT2 <BASE>
+0.3 0 0.0                     //É|ÉCÉìÉgà íu [m]
+50                            //spring constant [N/m]
+3                             //Viscosity [N*s/m]
+9                             //breaking load [N]
+1                             //coefficent of friction
+
+//POINT3 <BASE>
+-0.3 0 0.0                    //É|ÉCÉìÉgà íu [m]
+50                            //spring constant [N/m]
+3                             //Viscosity [N*s/m]
+9                             //breaking load [N]
+1                             //coefficent of friction
+
+//POINT4 <BASE>
+0 0.3 0.0                     //É|ÉCÉìÉgà íu [m]
+50                            //spring constant [N/m]
+3                             //Viscosity [N*s/m]
+9                             //breaking load [N]
+1                             //coefficent of friction
+
+//POINT5 <BASE>
+0 -0.3 0.0                    //É|ÉCÉìÉgà íu [m]
+50                            //spring constant [N/m]
+3                             //Viscosity [N*s/m]
+9                             //breaking load [N]
+1                             //coefficent of friction
+
+//POINT6 <FRONT>
+1.5 0.2 -0.35                 //É|ÉCÉìÉgà íu [m]
+50                            //spring constant [N/m]
+3                             //Viscosity [N*s/m]
+9                             //breaking load [N]
+1                             //coefficent of friction
+
+//POINT7 <FRON2>
+1.5 -0.2 -0.35                //É|ÉCÉìÉgà íu [m]
+50                            //spring constant [N/m]
+3                             //Viscosity [N*s/m]
+9                             //breaking load [N]
+1                             //coefficent of friction
+
+//POINT8 <REAR>
+-1.5 0.2 -0.35                //É|ÉCÉìÉgà íu [m]
+50                            //spring constant [N/m]
+3                             //Viscosity [N*s/m]
+9                             //breaking load [N]
+1                             //coefficent of friction
+
+//POINT9 <REAR2>
+-1.5 -0.2 -0.35               //É|ÉCÉìÉgà íu [m]
+50                            //spring constant [N/m]
+3                             //Viscosity [N*s/m]
+9                             //breaking load [N]
+1                             //coefficent of friction
+
+//POINT10 <RIGHT>
+0.2 1.5 -0.35                 //É|ÉCÉìÉgà íu [m]
+50                            //spring constant [N/m]
+3                             //Viscosity [N*s/m]
+9                             //breaking load [N]
+1                             //coefficent of friction
+
+//POINT11 <RIGH2>
+-0.2 1.5 -0.35                //É|ÉCÉìÉgà íu [m]
+50                            //spring constant [N/m]
+3                             //Viscosity [N*s/m]
+9                             //breaking load [N]
+1                             //coefficent of friction
+
+//POINT12 <LEFT>
+0.2 -1.5 -0.35                //É|ÉCÉìÉgà íu [m]
+50                            //spring constant [N/m]
+3                             //Viscosity [N*s/m]
+9                             //breaking load [N]
+1                             //coefficent of friction
+
+//POINT13 <LEFT2>
+-0.2 -1.5 -0.35               //É|ÉCÉìÉgà íu [m]
+50                            //spring constant [N/m]
+3                             //Viscosity [N*s/m]
+9                             //breaking load [N]
+1                             //coefficent of friction
+
+VMIX
+// out1 = c1 * in1 + c2 * in2
+// out2 = c1 * in1 - c2 * in2
+4 2                           //in
+6 5                           //out
+1                             //Coefficient
+1                             //Coefficient
+

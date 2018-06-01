@@ -1,0 +1,1 @@
+"C:\Program Files\java\jdk1.6.0_26\bin\java.exe" -classpath c:\Users\mthama\Desktop\UAVAS\bin;c:\Users\mthama\Desktop\UAVAS;c:\Users\mthama\Desktop\UAVAS\lib\jason.jar mind.arch.UAVASAgArch c:/Users/mthama/Desktop/UAVAS/default.mas2j

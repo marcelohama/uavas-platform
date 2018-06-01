@@ -1,0 +1,7 @@
+/* Jason Project */ MAS jasonAndroid {
+	infrastructure: Centralised
+	environment: simulators.fmssim.FMSSimEnvironment
+	agents:
+		uavas_fms agentArchClass mind.arch.UAVASFMSAg;
+		aslSourcePath: "src/mind/arch";
+} 

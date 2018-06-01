@@ -1,0 +1,233 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x10002c2f, pid=6820, tid=7312
+#
+# JRE version: 6.0_26-b03
+# Java VM: Java HotSpot(TM) Client VM (20.1-b02 mixed mode, sharing windows-x86 )
+# Problematic frame:
+# C  [rxtxSerial.dll+0x2c2f]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0404f800):  JavaThread "pool-2-thread-3" [_thread_in_native, id=7312, stack(0x04690000,0x046e0000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x000000bc
+
+Registers:
+EAX=0x00000000, EBX=0x6d883340, ECX=0x00000000, EDX=0x0011e618
+ESP=0x046df6a0, EBP=0x046df6b8, ESI=0x33d02820, EDI=0x0404f800
+EIP=0x10002c2f, EFLAGS=0x00010202
+
+Top of Stack: (sp=0x046df6a0)
+0x046df6a0:   00000006 046df730 33d09898 37e07468
+0x046df6b0:   0011e618 00000000 046df768 100030c0
+0x046df6c0:   0404d978 00000002 00000000 00000018
+0x046df6d0:   046df700 046df714 7c3416b3 01260000
+0x046df6e0:   00000000 7c3416b8 00000009 00000009
+0x046df6f0:   00000000 6d9f9d60 00000000 6d7f2ac6
+0x046df700:   00000000 00000000 00000000 00000000
+0x046df710:   046df704 00000022 ffffffff 0404d978 
+
+Instructions: (pc=0x10002c2f)
+0x10002c0f:   d0 00 10 00 75 17 8b 45 f8 c7 80 c0 00 00 00 00
+0x10002c1f:   00 00 00 8b 45 f8 a3 00 d0 00 10 eb 78 8b 45 fc
+0x10002c2f:   83 b8 bc 00 00 00 00 75 04 eb 12 89 f6 8b 45 fc
+0x10002c3f:   8b 90 bc 00 00 00 89 55 fc eb e2 89 f6 8b 45 f8 
+
+
+Register to memory mapping:
+
+EAX=0x00000000 is an unknown value
+EBX=0x6d883340 is an unknown value
+ECX=0x00000000 is an unknown value
+EDX=0x0011e618 is an unknown value
+ESP=0x046df6a0 is pointing into the stack for thread: 0x0404f800
+EBP=0x046df6b8 is pointing into the stack for thread: 0x0404f800
+ESI=0x33d02820 is an oop
+{constMethod} 
+ - klass: {other class}
+ - method:       0x33d02828 {method} 'open' '(Ljava/lang/String;)I' in 'gnu/io/RXTXPort'
+ - exceptions:   0x37a60068
+EDI=0x0404f800 is a thread
+
+
+Stack: [0x04690000,0x046e0000],  sp=0x046df6a0,  free space=317k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [rxtxSerial.dll+0x2c2f]
+C  [rxtxSerial.dll+0x30c0]
+C  [rxtxSerial.dll+0x6988]  Java_gnu_io_RXTXPort_open+0x210
+j  gnu.io.RXTXPort.open(Ljava/lang/String;)I+0
+j  gnu.io.RXTXPort.<init>(Ljava/lang/String;)V+114
+j  gnu.io.RXTXCommDriver.getCommPort(Ljava/lang/String;I)Lgnu/io/CommPort;+78
+j  gnu.io.CommPortIdentifier.open(Ljava/lang/String;I)Lgnu/io/CommPort;+80
+j  mind.engine.IOManager.write([BI)Z+90
+j  mind.engine.ActPerceptConverter.move_to(Lmind/engine/GeoPoint;)Z+57
+j  mind.engine.ProtocolConnection.executeAction(Ljava/lang/String;Ljason/asSyntax/Structure;)Z+512
+j  simulators.uavastsim.TSimEnvironment.executeAction(Ljava/lang/String;Ljason/asSyntax/Structure;)Z+3
+j  jason.environment.Environment$1.run()V+12
+j  java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Ljava/lang/Runnable;)V+59
+j  java.util.concurrent.ThreadPoolExecutor$Worker.run()V+28
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0xfae4b]
+V  [jvm.dll+0x18c531]
+V  [jvm.dll+0xfaff1]
+V  [jvm.dll+0xfb04b]
+V  [jvm.dll+0xb56b9]
+V  [jvm.dll+0x1190d4]
+V  [jvm.dll+0x1411ac]
+C  [msvcr71.dll+0x9565]  endthreadex+0xa0
+C  [kernel32.dll+0x51114]  BaseThreadInitThunk+0x12
+C  [ntdll.dll+0x5b429]  RtlInitializeExceptionChain+0x63
+C  [ntdll.dll+0x5b3fc]  RtlInitializeExceptionChain+0x36
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  gnu.io.RXTXPort.open(Ljava/lang/String;)I+0
+j  gnu.io.RXTXPort.<init>(Ljava/lang/String;)V+114
+j  gnu.io.RXTXCommDriver.getCommPort(Ljava/lang/String;I)Lgnu/io/CommPort;+78
+j  gnu.io.CommPortIdentifier.open(Ljava/lang/String;I)Lgnu/io/CommPort;+80
+j  mind.engine.IOManager.write([BI)Z+90
+j  mind.engine.ActPerceptConverter.move_to(Lmind/engine/GeoPoint;)Z+57
+j  mind.engine.ProtocolConnection.executeAction(Ljava/lang/String;Ljason/asSyntax/Structure;)Z+512
+j  simulators.uavastsim.TSimEnvironment.executeAction(Ljava/lang/String;Ljason/asSyntax/Structure;)Z+3
+j  jason.environment.Environment$1.run()V+12
+j  java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Ljava/lang/Runnable;)V+59
+j  java.util.concurrent.ThreadPoolExecutor$Worker.run()V+28
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0405c000 JavaThread "pool-7-thread-1" [_thread_blocked, id=5684, stack(0x04a50000,0x04aa0000)]
+  0x0405d000 JavaThread "pool-5-thread-1" [_thread_blocked, id=6304, stack(0x04c40000,0x04c90000)]
+  0x0405cc00 JavaThread "pool-6-thread-1" [_thread_blocked, id=6828, stack(0x04bf0000,0x04c40000)]
+  0x0405c400 JavaThread "pool-4-thread-2" [_thread_blocked, id=6688, stack(0x04aa0000,0x04af0000)]
+  0x0405b800 JavaThread "pool-4-thread-1" [_thread_blocked, id=7024, stack(0x04a00000,0x04a50000)]
+  0x0405b400 JavaThread "pool-3-thread-3" [_thread_blocked, id=7032, stack(0x049b0000,0x04a00000)]
+  0x0405ac00 JavaThread "uavas_tsim" [_thread_blocked, id=6616, stack(0x04960000,0x049b0000)]
+  0x04050400 JavaThread "pool-3-thread-2" [_thread_blocked, id=7040, stack(0x04910000,0x04960000)]
+  0x0404fc00 JavaThread "pool-3-thread-1" [_thread_blocked, id=7320, stack(0x048c0000,0x04910000)]
+=>0x0404f800 JavaThread "pool-2-thread-3" [_thread_in_native, id=7312, stack(0x04690000,0x046e0000)]
+  0x0404c400 JavaThread "uavas_tsim" [_thread_blocked, id=7352, stack(0x04640000,0x04690000)]
+  0x0404d000 JavaThread "pool-2-thread-2" [_thread_blocked, id=7300, stack(0x045f0000,0x04640000)]
+  0x0400dc00 JavaThread "pool-2-thread-1" [_thread_blocked, id=7304, stack(0x045a0000,0x045f0000)]
+  0x0400d400 JavaThread "uavas_tsim" [_thread_blocked, id=6544, stack(0x04550000,0x045a0000)]
+  0x0400cc00 JavaThread "pool-1-thread-3" [_thread_blocked, id=7056, stack(0x04500000,0x04550000)]
+  0x0400c400 JavaThread "pool-1-thread-2" [_thread_blocked, id=7284, stack(0x044b0000,0x04500000)]
+  0x0400bc00 JavaThread "pool-1-thread-1" [_thread_blocked, id=7264, stack(0x04460000,0x044b0000)]
+  0x04049400 JavaThread "uavas_tsim" [_thread_blocked, id=6384, stack(0x04410000,0x04460000)]
+  0x01a1b800 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=7436, stack(0x03d70000,0x03dc0000)]
+  0x01a06c00 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=4304, stack(0x03d20000,0x03d70000)]
+  0x01a05c00 JavaThread "Attach Listener" daemon [_thread_blocked, id=7228, stack(0x03cd0000,0x03d20000)]
+  0x01a04c00 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=7664, stack(0x03c80000,0x03cd0000)]
+  0x019fac00 JavaThread "Finalizer" daemon [_thread_blocked, id=7000, stack(0x03c30000,0x03c80000)]
+  0x019f9000 JavaThread "Reference Handler" daemon [_thread_blocked, id=7184, stack(0x03be0000,0x03c30000)]
+  0x01269c00 JavaThread "main" [_thread_in_Java, id=7248, stack(0x00350000,0x003a0000)]
+
+Other Threads:
+  0x019bd400 VMThread [stack: 0x03b90000,0x03be0000] [id=6976]
+  0x01a2cc00 WatcherThread [stack: 0x03dc0000,0x03e10000] [id=7916]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 4928K, used 1443K [0x23a60000, 0x23fb0000, 0x28fb0000)
+  eden space 4416K,  23% used [0x23a60000, 0x23b673c8, 0x23eb0000)
+  from space 512K,  76% used [0x23f30000, 0x23f91908, 0x23fb0000)
+  to   space 512K,   0% used [0x23eb0000, 0x23eb0000, 0x23f30000)
+ tenured generation   total 10944K, used 3364K [0x28fb0000, 0x29a60000, 0x33a60000)
+   the space 10944K,  30% used [0x28fb0000, 0x292f9128, 0x292f9200, 0x29a60000)
+ compacting perm gen  total 12288K, used 3067K [0x33a60000, 0x34660000, 0x37a60000)
+   the space 12288K,  24% used [0x33a60000, 0x33d5ef60, 0x33d5f000, 0x34660000)
+    ro space 10240K,  51% used [0x37a60000, 0x37f8dff8, 0x37f8e000, 0x38460000)
+    rw space 12288K,  55% used [0x38460000, 0x38afc208, 0x38afc400, 0x39060000)
+
+Code Cache  [0x01a80000, 0x01b68000, 0x03a80000)
+ total_blobs=426 nmethods=251 adapters=111 free_code_cache=32628224 largest_free_block=0
+
+Dynamic libraries:
+0x00400000 - 0x00424000 	C:\Program Files\Java\jre6\bin\javaw.exe
+0x77310000 - 0x7744d000 	C:\Windows\SYSTEM32\ntdll.dll
+0x77460000 - 0x77534000 	C:\Windows\system32\kernel32.dll
+0x75560000 - 0x755aa000 	C:\Windows\system32\KERNELBASE.dll
+0x75d70000 - 0x75e10000 	C:\Windows\system32\ADVAPI32.dll
+0x76530000 - 0x765dc000 	C:\Windows\system32\msvcrt.dll
+0x772c0000 - 0x772d9000 	C:\Windows\SYSTEM32\sechost.dll
+0x75e10000 - 0x75eb1000 	C:\Windows\system32\RPCRT4.dll
+0x759b0000 - 0x75a79000 	C:\Windows\system32\USER32.dll
+0x757c0000 - 0x7580e000 	C:\Windows\system32\GDI32.dll
+0x763d0000 - 0x763da000 	C:\Windows\system32\LPK.dll
+0x76490000 - 0x7652d000 	C:\Windows\system32\USP10.dll
+0x75b10000 - 0x75b2f000 	C:\Windows\system32\IMM32.DLL
+0x76300000 - 0x763cc000 	C:\Windows\system32\MSCTF.dll
+0x7c340000 - 0x7c396000 	C:\Program Files\Java\jre6\bin\msvcr71.dll
+0x6d7f0000 - 0x6da9f000 	C:\Program Files\Java\jre6\bin\client\jvm.dll
+0x73f40000 - 0x73f72000 	C:\Windows\system32\WINMM.dll
+0x753e0000 - 0x7542b000 	C:\Windows\system32\apphelp.dll
+0x6d7a0000 - 0x6d7ac000 	C:\Program Files\Java\jre6\bin\verify.dll
+0x6d320000 - 0x6d33f000 	C:\Program Files\Java\jre6\bin\java.dll
+0x77450000 - 0x77455000 	C:\Windows\system32\PSAPI.DLL
+0x6d7e0000 - 0x6d7ef000 	C:\Program Files\Java\jre6\bin\zip.dll
+0x10000000 - 0x10012000 	C:\Program Files\Java\jre6\bin\rxtxSerial.dll
+0x6c240000 - 0x6c267000 	C:\Windows\system32\crtdll.dll
+0x04af0000 - 0x04b3a000 	C:\Users\mthama\workspace\UAVAS\lwjgl.dll
+0x63a40000 - 0x63b08000 	C:\Windows\system32\OPENGL32.dll
+0x63a10000 - 0x63a32000 	C:\Windows\system32\GLU32.dll
+0x717a0000 - 0x71887000 	C:\Windows\system32\DDRAW.dll
+0x73530000 - 0x73536000 	C:\Windows\system32\DCIMAN32.dll
+0x75810000 - 0x759ad000 	C:\Windows\system32\SETUPAPI.dll
+0x75530000 - 0x75557000 	C:\Windows\system32\CFGMGR32.dll
+0x75a80000 - 0x75b0f000 	C:\Windows\system32\OLEAUT32.dll
+0x75ec0000 - 0x7601c000 	C:\Windows\system32\ole32.dll
+0x75790000 - 0x757a2000 	C:\Windows\system32\DEVOBJ.dll
+0x73a30000 - 0x73a43000 	C:\Windows\system32\dwmapi.dll
+0x746e0000 - 0x746e9000 	C:\Windows\system32\VERSION.dll
+0x73e40000 - 0x73e80000 	C:\Windows\system32\uxtheme.dll
+0x68970000 - 0x68977000 	C:\Windows\system32\atiglpxx.dll
+0x69030000 - 0x69ee2000 	C:\Windows\system32\atioglxx.dll
+0x75d30000 - 0x75d65000 	C:\Windows\system32\WS2_32.dll
+0x757b0000 - 0x757b6000 	C:\Windows\system32\NSI.dll
+0x68a50000 - 0x68a57000 	C:\Windows\system32\atigktxx.dll
+0x04b80000 - 0x04bba000 	C:\Windows\system32\atiadlxx.dll
+0x75760000 - 0x7578d000 	C:\Windows\system32\WINTRUST.dll
+0x755b0000 - 0x756cc000 	C:\Windows\system32\CRYPT32.dll
+0x75520000 - 0x7552c000 	C:\Windows\system32\MSASN1.dll
+0x75430000 - 0x7543c000 	C:\Windows\system32\CRYPTBASE.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=Cp1252 
+java_command: simulators.uavastsim.TSimUAVAS
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+CLASSPATH=.;C:\Program Files\Java\jre6\lib\ext\QTJava.zip
+PATH=C:/Program Files/Java/jre6/bin/client;C:/Program Files/Java/jre6/bin;C:/Program Files/Java/jre6/lib/i386;C:\Program Files\MiKTeX 2.9\miktex\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Hewlett-Packard\HP SimplePass Identity Protection\;c:\Program Files\Common Files\Roxio Shared\DLLShared\;c:\Program Files\Common Files\Roxio Shared\DLLShared\;c:\Program Files\Common Files\Roxio Shared\12.0\DLLShared\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Autodesk\Backburner\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\QuickTime\QTSystem\;C:\MinGW\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\eclipse;
+USERNAME=mthama
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 37 Stepping 2, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 Build 7600 
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 37 stepping 2, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+Memory: 4k page, physical 2545520k(852576k free), swap 5089276k(2367416k free)
+
+vm_info: Java HotSpot(TM) Client VM (20.1-b02) for windows-x86 JRE (1.6.0_26-b03), built on May  4 2011 00:50:59 by "java_re" with MS VC++ 7.1 (VS2003)
+
+time: Fri Sep 09 01:13:14 2011
+elapsed time: 0 seconds
+

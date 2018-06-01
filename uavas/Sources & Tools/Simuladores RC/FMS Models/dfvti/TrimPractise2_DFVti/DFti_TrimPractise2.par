@@ -1,0 +1,113 @@
+1      iModelStyle (0 = airplane/1 = helicopter) 
+
+7.5    Masse (cMasse) [kg][7.5]
+0.1   moment of inertia around the vertical axis (fIHochachse)
+0.1   moment of inertia around the transverse axis (fIQuerachse
+0.1   moment of inertia around the longitudinal axis (fILaengsachse)
+2.2    rotation resistance[2.2]
+
+35     exponentially nod (expnick) [ % ][35]
+35     exponentially roll (exproll) [ % ][35]
+0      exponentially greed (more expgier) [ % ] [0]
+35      exponentially pitch (exppitch) [ % ][0]
+
+0.65   length of a main rotor blade (lRot) [ m ] [0.65]
+0.04   surface of the entire main rotor (aRot) [ m^2 ][0.04]
+1800   revolutions per minute of the main rotor (upmRot) [ 1/min ] [1800]
+0.08   collectives blade control of the main rotor (akol) [ wheel ][0.08]
+0.008  cyclic blade control nodding the main rotor (azykln) [ wheel ][0.008]
+0.008  cyclic blade control roles of the main rotor (azykln) [ wheel ][0.008]
+0.10   height of the Rotos over the emphasis (hRot) [ m ][0.10]
+0.001  back turning inclination by horizontal incident flow (fhorzd)[0.001]
+
+0.18   length of a tail rotor blade (lRoth) [ m ][0.18]
+0.020  surface of the entire tail rotor (aRoth) [ m^2 ] [0.020]
+4800   revolutions per minute of the tail rotor (upmRoth) [ 1/min ][4800]
+0.12   collectives blade control of the tail rotor (akolh) [ wheel ][mv 0.12]
+0.009  basic angles of incidence of the tail rotor (alpha0h) [ wheel ][0.009]
+0.9    distance of the tail rotor axle of the emphasis (LH) [ m ][0.9]
+0.25   greed inclination by lateral incident flow (fhorzdh)[0.25]
+
+0.01   sensitivity of the gyroscope (hstab) [ rad/(rad/s) ] /-0.007 = 0%, 0.05=100% [0.01]
+50     per cent of fading out the gyroscope with volume-listen-lay the tail rotor (hstabdel) [ % ][80][50]
+
+6.2    lift rise (DCA) 0.8 maximum coefficient of lift (camax) [6.2]
+0.8    maximum coefficient of lift (camax)[0.8]
+-0.6   minimum coefficient of lift (camin)[-0.6]
+0.02   coefficient of drag with zero lift (cw0)[0.02]
+0.02   resistance rise (dcw)[0.02]
+0.5    coefficient of drag of the trunk (cwR)[0.5]
+
+9      points of chassis:
+
+0.3    PosX
+0.3    PosY
+-0.15  PosZ
+1.0    mueh
+2000   h [N/m]
+10     muev
+800    fmax [landing pad]
+
+0.3    PosX
+-0.3   PosY
+-0.15  PosZ
+1.0    mueh
+2000   h [N/m]
+10     muev
+800    fmax[landing pad]
+
+-0.2   PosX
+-0.2   PosY
+-0.15  PosZ
+1.0    mueh
+2000   h [N/m]
+10     muev
+800    fmax[landing pad]
+
+-0.2   PosX
+0.2    PosY
+-0.15  PosZ
+1.0    mueh
+2000   h [N/m]
+10     muev
+800    fmax[landing pad]
+
+-0.8   PosX [-0.8]
+0      PosY
+-0.09  PosZ
+2      mueh
+2500   h [N/m]
+10     muev
+50     fmax [ the rest must be upper points]
+
+0.5    PosX
+0.5    PosY
+0.1    PosZ
+2      mueh
+2500   h [N/m]
+10     muev
+5      fmax
+
+0.5    PosX
+-0.5   PosY
+0.1    PosZ
+2      mueh
+2500   h [N/m]
+10     muev
+5      fmax
+
+-0.5   PosX
+-0.5   PosY
+0.1    PosZ
+2      mueh [2]
+2500   h [N/m]
+10     muev
+5      fmax
+
+-0.5   PosX
+0.5    PosY
+0.1    PosZ
+2      mueh
+2500   h [N/m]
+10     muev
+5      fmax

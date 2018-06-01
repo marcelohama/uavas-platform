@@ -1,0 +1,113 @@
+1        1:Type(-)      Type[1=Helicopter] ParDesigner Ver0.8
+
+4.0      2:m(Kg)        Mass
+0.3      3:Izz(Kg*m^2)  Yaw Inertia Moment
+0.3      4:Iyy(Kg*m^2)  Pitch Inertia Moment
+0.3      5:Ixx(Kg*m^2)  Roll Inertia Moment
+1.8      6:Ct(-)        Friction for Rotate(Yaw)
+
+40       7:ExpE(%)      Elevator Expoential Ratio
+40       8:ExpA(%)      Aileron Expoential Ratio
+0        9:ExpR(%)      Rudder Expoential Ratio
+0        10:ExpP(%)     Collective Pitch Expoential Ratio
+
+0.65     11:R(m)        Length of Main Blade
+0.04     12:S(m^2)      Area of Main Blades
+1900     13:N(rmp)      Revolution of Main Rotor
+0.08     14:Pmax(rad)   Collective Pitch
+0.008    15:Emax(rad)   Elevator Cyclic Pitch
+0.008    16:Amax(rad)   Aileron Cyclic Pitch
+0.05     17:Hm(m)       Position of Main Rotor from Center of Gravity
+0.01     18:fhorzd(-)   Effect of Side Wind
+
+0.18     19:Rt(m)       Length of Tail Blade
+0.020    20:St(m^2)     Area of Tail Blades
+4800     21:Nt(rmp)     Revolution of Tail Rotor
+0.12     22:Rmax(rad)   Maximum Pitch of Tail Braid
+0.009    23:at0(rad)    Refarence Pitch of Tail Braid
+0.9      24:Lt(m)       Position of Tail Rotor from Center of Gravity
+0.0      25:fhorzdh(-)  Yow Stabilization
+
+0.1      26:kG(s)       Sensitivity of Gyroscope
+0        27:mG(%)       Mixing of Gyroscope
+
+6.0      28:CLa(/rad)   Gradient of Lift Coefficient
+0.8      29:CLmax(-)    Maximum Lift Coefficient
+0.0      30:CLmin(-)    Minimum Lift Coefficient
+0.02     31:Cd0(-)      Profile Drag Coefficient
+0.02     32:kCdi(-)     Rise Rate of Indused Drag Coefficient
+0.3      33:CDb(-)      Drag Coefficient of Fuselage
+
+8        34:nb(-)       Points of fuselage 
+
+0.3      1:PosX(m)      X Position
+0.3      2:PosY(m)      Y Position
+-0.15    3:PosZ(m)      X Position
+2        4:muh(-)       Horizontal Friction Coefficient
+1000     5:h(N/m)       Rigidity
+10       6:muv(-)       Vertical Friction Coefficient
+900      7:fmax(N)      Strength
+
+0.3      1:PosX(m)      X Position
+-0.3     2:PosY(m)      Y Position
+-0.15    3:PosZ(m)      X Position
+2        4:muh(-)       Horizontal Friction Coefficient
+1000     5:h(N/m)       Rigidity
+10       6:muv(-)       Vertical Friction Coefficient
+900      7:fmax(N)      Strength
+
+-0.2     1:PosX(m)      X Position
+-0.2     2:PosY(m)      Y Position
+-0.15    3:PosZ(m)      X Position
+2        4:muh(-)       Horizontal Friction Coefficient
+1000     5:h(N/m)       Rigidity
+10       6:muv(-)       Vertical Friction Coefficient
+900      7:fmax(N)      Strength
+
+-0.2     1:PosX(m)      X Position
+0.2      2:PosY(m)      Y Position
+-0.15    3:PosZ(m)      X Position
+2        4:muh(-)       Horizontal Friction Coefficient
+1000     5:h(N/m)       Rigidity
+10       6:muv(-)       Vertical Friction Coefficient
+900      7:fmax(N)      Strength
+
+0.5      1:PosX(m)      X Position
+0.5      2:PosY(m)      Y Position
+0.1      3:PosZ(m)      X Position
+1        4:muh(-)       Horizontal Friction Coefficient
+2500     5:h(N/m)       Rigidity
+10       6:muv(-)       Vertical Friction Coefficient
+6        7:fmax(N)      Strength
+
+0.5      1:PosX(m)      X Position
+-0.5     2:PosY(m)      Y Position
+0.1      3:PosZ(m)      X Position
+1        4:muh(-)       Horizontal Friction Coefficient
+2500     5:h(N/m)       Rigidity
+10       6:muv(-)       Vertical Friction Coefficient
+6        7:fmax(N)      Strength
+
+0.5      1:PosX(m)      X Position
+0.5      2:PosY(m)      Y Position
+0.1      3:PosZ(m)      X Position
+1        4:muh(-)       Horizontal Friction Coefficient
+2500     5:h(N/m)       Rigidity
+10       6:muv(-)       Vertical Friction Coefficient
+6        7:fmax(N)      Strength
+
+-0.5     1:PosX(m)      X Position
+0.5      2:PosY(m)      Y Position
+0.1      3:PosZ(m)      X Position
+1        4:muh(-)       Horizontal Friction Coefficient
+2500     5:h(N/m)       Rigidity
+10       6:muv(-)       Vertical Friction Coefficient
+6        7:fmax(N)      Strength
+
+-0.5     1:PosX(m)      X Position
+-0.5     2:PosY(m)      Y Position
+0.1      3:PosZ(m)      X Position
+1        4:muh(-)       Horizontal Friction Coefficient
+2500     5:h(N/m)       Rigidity
+10       6:muv(-)       Vertical Friction Coefficient
+6        7:fmax(N)      Strength
